@@ -25,7 +25,7 @@
   <a href="https://github.com/jina-ai/jina/blob/master/README.de.md">Deutsch</a> •
   <a href="https://github.com/jina-ai/jina/blob/master/README.ru.md">Русский язык</a> •
   <a href="https://github.com/jina-ai/jina/blob/master/README.zh.md">中文</a> •
-  <a href="https://github.com/jina-ai/jina/blob/master/README.pt_br.md">Português (BR)</a>
+  <a href="https://github.com/jina-ai/jina/blob/master/README.pt.md">Português (BR)</a>
 </p>
 
 
@@ -40,15 +40,15 @@
   <a href="https://jobs.jina.ai">We are Hiring</a>
 </p>
 
-Jina é um framework de pesquisa baseada em IA, que permite que desenvolvedores criem sistemas de busca **cross/multi-modals** (como texto, imagens, video, áudio) na nuvem. Jina é mantida a logo prazo por [um grupo movido pela aventura em tempo integral](https://jina.ai).
+Jina é um framework de pesquisa impulsionado por IA, permitindo que desenvolvedores criem sistemas de busca **cross/multi-modals** (como texto, imagens, video, áudio) na nuvem. Jina é mantida a logo prazo por [um grupo movido pela aventura em tempo integral](https://jina.ai).
 
-⏱️ **Economia de tempo** - Inicie um sistema impulsionado por IA em poucos minutos.
+⏱️ **Economiza tempo** - Inicie um sistema impulsionado por IA em poucos minutos.
 
 🧠 **Modelos de IA de primeira classe** - Jina é um novo padrão de design para sistemas neurais de pesquisa com apoio especial para [modelos de IA de state-of-the-art](https://docs.jina.ai/chapters/all_exec.html).
 
 🌌 **Busca universal** - Indexação de larga escala e consulta de qualquer tipo em várias plataformas. Vídeo, imagem, texto curto/longo, código-fonte, e mais.
 
-🚀 **Production Ready** - Features nativas de nuvem que funcionam "out-of-the-box" (fora da caixa), por ex. conteinerização, microsserviço, distribuição, escalabilidade (scaling), sharding, async IO, REST, gRPC.
+🚀 **Production Ready** - Features nativas de nuvem que funcionam fora da caixa ("out-of-the-box"), por ex. conteinerização, microsserviço, distribuição, escalabilidade (scaling), sharding, async IO, REST, gRPC.
 
 🧩 **Conecte e use** - Com [Jina Hub](https://github.com/jina-ai/jina-hub), é fácil expandir Jina com simples scripts em Python ou com Imagens Docker otimizadas para seu campo de pesquisa.
 
@@ -63,12 +63,12 @@ Jina é um framework de pesquisa baseada em IA, que permite que desenvolvedores 
 - [Instalação](#instalação)
 - [Jina "Olá, mundo" 👋🌍](#jina-olá-mundo-)
 - [Tutoriais](#tutoriais)
-- [Documentação](#documentação)
-- [Contribuindo](#contribuindo)
-- [Comunidade](#comunidade)
-- [Governança Aberta](#governança-aberta)
-- [Junte-se a nós](#junte-se-a-nós)
-- [Licença](#licença)
+- [Documentação](#documentation)
+- [Contribuindo](#contributing)
+- [Comunidade](#community)
+- [Open Governance](#open-governance)
+- [Junte-se a nós](#join-us)
+- [Licença](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -82,7 +82,7 @@ No sistemas operacionais Linux/MacOS com Python >= 3.7:
 pip install jina
 ```
 
-Para instalar Jina em dependências adicionais ou no Raspberry Pi, [favor checar a documentação](https://docs.jina.ai).
+Para instalar Jina em dependências adicionais ou no Raspberry Pi [por favor, cheque a documentação](https://docs.jina.ai).
 
 ### Em um Container Docker
 
@@ -100,7 +100,7 @@ Paara começar, você pode tentar nosso "Hello, World" (que significa "Olá, mun
 jina hello-world
 ```
 
-...ou, mais facilmente, para usuários de Docker, **sem instalação necessária**:
+...ou, mais facilmente para usuários de Docker, **sem instalação necessária**:
 
 ```bash
 docker run -v "$(pwd)/j:/j" jinaai/jina hello-world --workdir /j && open j/hello-world.html  # substituir "open" por "xdg-open" no Linux
@@ -126,8 +126,8 @@ A implementação por trás disso é simples:
 <table>
 <tr>
 <td> Python API </td>
-<td> ou use <a href="https://github.com/jina-ai/jina/blob/master/jina/resources/helloworld.flow.index.yml">YAML spec</a></td>
-<td> ou use <a href="https://github.com/jina-ai/dashboard">Dashboard</a></td>
+<td> or use <a href="https://github.com/jina-ai/jina/blob/master/jina/resources/helloworld.flow.index.yml">YAML spec</a></td>
+<td> or use <a href="https://github.com/jina-ai/dashboard">Dashboard</a></td>
 </tr>
 <tr>
 <td>
@@ -189,7 +189,7 @@ from jina.flow import Flow
 f = Flow().add(uses='encoder.yml', host='192.168.0.99')
 ```
 
-#### [Usando um Container Docker](https://docs.jina.ai/chapters/hub/index.html)
+#### [Usando um Conteiner Docker](https://docs.jina.ai/chapters/hub/index.html)
 
 ```python
 from jina.flow import Flow
@@ -219,7 +219,7 @@ with f:
     f.block()
 ```
 
-Ficou interessado(a)? Explore outras opções:
+Sentiu interesse? Explore outras opções:
 
 ```bash
 jina hello-world --help
@@ -233,7 +233,7 @@ pip install jina[devel]
 jina hub new --type app
 ```
 
-Você pode facilmente criar um projeto com Jina a partir de templates, basta um comando no terminal. Este comando acima cria um ponto de entrada (entrypoint) de Python, configurações YAML e um Dockerfile. Você pode começar a partir dali.
+Você pode facilmente criar um projeto com Jina usando templates com um comando no terminal. Este cria um ponto de entrada de Python, configurações YAML e um Dockerfile. Você pode começar a partir dali.
 
 
 ## Tutoriais
@@ -269,7 +269,7 @@ Você pode facilmente criar um projeto com Jina a partir de templates, basta um 
 <tr>
 <td><h3>🐣</h3></td>
 <td>
-<h4><a href="https://github.com/jina-ai/examples/tree/master/southpark-search">Construir um sistema de busca semântica com PLN (NLP)</a></h4>
+<h4><a href="https://github.com/jina-ai/examples/tree/master/southpark-search">Construir um sistema de busca semântica com NLP</a></h4>
 Procure scripts de South Park e pratique com Flows e Pods
 </td>
 </tr>
@@ -278,7 +278,7 @@ Procure scripts de South Park e pratique com Flows e Pods
 <td><h3>🐣</h3></td>
 <td>
 <h4><a href="https://github.com/jina-ai/examples/tree/master/my-first-jina-app">Meu primeiro App com Jina</a></h4>
-Use cookiecutter para iniciar um app com Jina
+Usando cookiecutter para iniciar um app com Jina
 </td>
 </tr>
 
@@ -331,13 +331,13 @@ Procure Pokémon com a representação visual de state-of-the-art</td>
  -->
 </table>
 
-## Documentação
+## Doumentação
 
 <a href="https://docs.jina.ai/">
 <img align="right" width="350px" src="https://github.com/jina-ai/jina/blob/master/.github/jina-docs.png?raw=true " />
 </a>
 
-A melhor maneira de aprender Jina de forma aprofundada é lendo nossa documentação. A documentação é construída em cima de cada push, merge, e release na branch master.
+A melhor forma de aprender Jina de forma aprofundada é lendo nossa documentação. A documentação é construída em cima de cada push, merge, e release na branch master.
 
 #### O básico
 
@@ -362,7 +362,7 @@ Você é um(a) "Doc"-star? Junte-se a nós! Todo tipo de ajuda na documentação
 
 ## Contribuindo
 
-Todo tipo de contribuição da comunidade open-source é bem-vindo, individuais e parceiros. Nós devemos nosso sucesso à sua participação ativa.
+Todo tipo de contribuição da comunidade open-source é bem-vindo, individuals and partners. Nós devemos nosso sucesso à sua participação ativa.
 
 - [Orientações para contribuição](CONTRIBUTING.md)
 - [Ciclos de Release e estágios de desenvolvimento](RELEASE.md)
@@ -394,7 +394,7 @@ Todo tipo de contribuição da comunidade open-source é bem-vindo, individuais 
 ## Comunidade
 
 - [Slack workspace](https://join.slack.com/t/jina-ai/shared_invite/zt-dkl7x8p0-rVCv~3Fdc3~Dpwx7T7XG8w) - junte-se ao #general no nosso Slack para conhecer o time e fazer perguntas
-- [Canal no YouTube](https://youtube.com/c/jina-ai) - inscreva-se para receber nossos tutoriais mais recentes, demos de release, webinários e apresentações
+- [Canal no YouTube](https://youtube.com/c/jina-ai) - inscreva-se para receber nossos tutoriais mais recentes, demos de release, webinários e apresentações.
 - [LinkedIn](https://www.linkedin.com/company/jinaai/) - conheça Jina AI como uma empresa e encontre oportunidades de emprego
 - [![Twitter Follow](https://img.shields.io/twitter/follow/JinaAI_?label=Follow%20%40JinaAI_&style=social)](https://twitter.com/JinaAI_) - siga e interaja conosco usando a hashtag `#JinaSearch`
 - [Empresa](https://jina.ai) - aprenda mais sobre nossa empresa e como somos totalmente comprometidos com open-source.
@@ -408,7 +408,7 @@ Como parte do nosso modelo de governança aberta, nós hosteamos [Engineering Al
 - [Adicionar ao Google Calendar](https://calendar.google.com/event?action=TEMPLATE&tmeid=MHIybG03cjAwaXE3ZzRrYmVpaDJyZ2FpZjlfMjAyMDEwMTNUMTIwMDAwWiBjXzF0NW9nZnAyZDQ1djhmaXQ5ODFqMDhtY200QGc&tmsrc=c_1t5ogfp2d45v8fit981j08mcm4%40group.calendar.google.com&scp=ALL)
 - [Download .ics](https://hanxiao.io/2020/08/06/Engineering-All-Hands-in-Public/jina-ai-public.ics)
 
-Será feita uma live-stream da reunião, que depois será publicada em nosso [Canal do YouTube](https://youtube.com/c/jina-ai).
+Será feita uma live-stream da reunião, que depois será  publicada em nosso [Canal do YouTube](https://youtube.com/c/jina-ai).
 
 ## Junte-se a nós
 
